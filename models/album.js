@@ -12,4 +12,4 @@ var AlbumSchema = Schema({
 });
 
 
-module.export = mongoose.model('Album', AlbumSchema);
+module.exports = mongoose.model('Album', AlbumSchema);

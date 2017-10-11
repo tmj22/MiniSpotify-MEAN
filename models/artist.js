@@ -6,8 +6,8 @@ var Schema = mongoose.Schema;
 var ArtistSchema = Schema({
   name: String,
   description: String,
-  image; String
+  image: String
 });
 
 
-module.export = mongoose.model('Artist', ArtistSchema);
+module.exports = mongoose.model('Artist', ArtistSchema);
