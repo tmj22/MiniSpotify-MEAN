@@ -1,9 +1,9 @@
 'use strict'
-var fs = require('fs');
-var path = require('path');
-var bcrypt = require('bcrypt-nodejs');
-var User = require('../models/user');
-var jwt = require('../services/jwt');
+const fs = require('fs');
+const path = require('path');
+const bcrypt = require('bcrypt-nodejs');
+const User = require('../models/user');
+const jwt = require('../services/jwt');
 
 
 function pruebas(req, res) {
@@ -15,7 +15,7 @@ function pruebas(req, res) {
 function saveUser(req, res) {
   var user = new User();
   var params = req.body;
-  
+
   user.name = params.name;
   user.surname = params.surname;
   user.email = params.email;

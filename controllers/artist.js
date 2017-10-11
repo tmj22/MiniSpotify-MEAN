@@ -1,12 +1,12 @@
 'use strict'
 
-var path = require('path');
-var fs = require('fs');
-var mongoosePaginate = require('mongoose-pagination');
+const path = require('path');
+const fs = require('fs');
+const mongoosePaginate = require('mongoose-pagination');
 
-var Artist = require('../models/artist');
-var Album = require('../models/album');
-var Song = require('../models/song');
+const Artist = require('../models/artist');
+const Album = require('../models/album');
+const Song = require('../models/song');
 
 
 function getArtist(req, res) {
@@ -186,7 +186,7 @@ function uploadImage(req, res){
           });
         } else {
           res.status(200).send({
-            user: artistUpdated
+            artist: artistUpdated
           });
         }
       });
