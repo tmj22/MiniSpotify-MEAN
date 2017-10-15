@@ -93,7 +93,7 @@ function loginUser(req, res) {
             }
           } else {
             res.status(404).send({
-              message: 'El usuario no ha podido loggearse'
+              message: 'No se ha podido realizar el login'
             });
           }
         });
@@ -105,6 +105,12 @@ function loginUser(req, res) {
 function updateUser(req, res) {
   var userId = req.params.id;
   var update = req.body;
+
+  if (userId != req.user.sub) {
+    return res.status(500).send({
+      message: 'No tienes permiso para actualizar este usuario'
+    });
+  }
 
   User.findByIdAndUpdate(userId, update, (err, userUpdated) => {
     if (err) {
