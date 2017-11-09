@@ -1,12 +1,18 @@
 html{
   margin: 0px;
   height: 100%;
+  background: #e9ecef;
 }
 
 body{
   margin: 0px;
   height: 100%;
-  background:white;
+  background:#e9ecef;
+}
+
+.central{
+  height: 100%;
+  overflow-y: scroll;
 }
 .row{
   height: 100%!important;
@@ -18,9 +24,14 @@ body{
   display: block;
 }
 
+.actived * {
+    color: #e9ecef;
+
+}
+
 
 .navigation{
-  background-color: rgb(17, 196, 170);
+  background-color: #212529;
   height: 100%!important;
   padding-bottom: 50px;
   padding-left: 40px;
@@ -31,14 +42,17 @@ body{
 
 .btn-primary {
     color: #fff;
-    background-color: rgb(17, 196, 170);
-    border-color: rgb(17, 196, 170);
+    background-color: rgb(0, 144, 123);
+    border-color: rgb(0, 144, 123);
+    font-weight: normal;
+
 }
 
 .btn-primary:hover  {
     color: #fff;
-    background-color: rgb(0, 144, 123);
-    border-color: rgb(0, 144, 123);
+    background-color: rgb(17, 196, 170);
+    border-color: rgb(17, 196, 170);
+    font-weight: normal;
 }
 
 .nav-container{
@@ -46,11 +60,11 @@ body{
 }
 
 .user_logged a{
-  color: rgb(0, 0, 0)!important;
+  color:  #212529!important;
 }
 
 .user_logged a:hover{
-  color: rgb(0, 0, 0)!important;
+  color: #212529!important;
 }
 
 .user-image {
@@ -70,12 +84,12 @@ body{
 }
 
 .navigation a{
-  color: rgba(0, 0, 0, 0.86)!important;
+  color:  rgb(17, 196, 170);
   margin-top:10px;
   margin-bottom:10px;
   display:block;
   text-decoration: none;
-  text-shadow: 2px 2px 4px rgb(2, 113, 97);
+  text-shadow: 2px 2px 4px black;
   font-weight: 500;
 }
 .navigation i{
@@ -99,10 +113,78 @@ body{
 }
 
 #identity_name{
-    text-shadow: 2px 2px 4px rgb(2, 113, 97);
+    text-shadow: 2px 2px 4px black;
     font-weight: 500;
+      color:  rgb(17, 196, 170);
 
 }
 .central{
-  box-shadow: 0 0 25px 3px rgb(2, 113, 97);
+  box-shadow: 0 0 25px 3px #444;
+}
+
+.artist_image_edit img{
+  width:150px;
+}
+
+.artist-list{
+  margin:0px;
+  padding: 0px;
+  margin-top: 30px;
+  list-style: none;
+}
+
+.artist-item{
+  width: 23%;
+  margin:0px;
+  padding: 0px;
+  height:325px;
+  border: 1px solid #444;
+  margin-left: 20px;
+  margin-top: 20px;
+    box-shadow: 4px 4px 10px 2px rgb(2, 113, 97);
+}
+
+
+.artist-item .artist-image{
+  height:245px;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+}
+
+.artist-item .artist-image img{
+  height: 100%;
+}
+
+.artist-item .artist-name{
+  color:black;
+  padding: 10px;
+  background: #222326;
+}
+
+
+.artist-item .artist-name a{
+  color:white;
+}
+
+#artist-head-card .image{
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  float: left;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+#artist-head-card .image img{
+  height: 300px;
+
+}
+
+.seguro{
+  position: absolute;
+  width:80%;
+  height: 40px;
+  margin-top: -33px;
+background: #222326
 }

@@ -1,5 +1,5 @@
-<div class="row">
-<div *ngIf="identity" class="navigation col-lg-2">
+<div  *ngIf="identity" class="row">
+<div  class="navigation col-lg-2">
   <h4 class="logo">
     <a [routerLink]="['/']">
     <i class="fa fa-play logoPlay" aria-hidden="true"></i>
@@ -14,31 +14,31 @@
   <span id="identity_name">Hola {{ identity.name }}!</span>
 </nav>
 <nav id="navigation">
-  <a [routerLink]="['/perfil']">
+  <a [routerLink]="['/perfil']" [routerLinkActive] = "['actived']">
     <i class="fa fa-cog" aria-hidden="true"></i> Perfil<br>
   </a>
 
-  <a href="#">
+  <a href="#" [routerLinkActive] = "['actived']">
     <i class="fa fa-search" aria-hidden="true"></i> Buscar<br>
   </a>
 
-  <a href="#">
+  <a [routerLink]="['/artists', 1]"  [routerLinkActive] = "['actived']">
     <i class="fa fa-star" aria-hidden="true"></i> Artistas<br>
   </a>
 
-  <a href="#">
+  <a href="#" [routerLinkActive] = "['actived']">
     <i class="fa fa-book" aria-hidden="true"></i> Álbumes<br>
   </a>
-  <span class="btn btn-warning logout" (click)="logOut()">CERRAR SESIÓN</span>
+  <span class="btn btn-primary logout" (click)="logOut()">CERRAR SESIÓN</span>
 </nav>
 
 </div>
-<div *ngIf="identity" class="central col-lg-10">
+<div [class.hidden]="!identity" class="central col-lg-10">
   <router-outlet></router-outlet>
 </div>
 </div>
 
-<div *ngIf="!identity" class="col-lg-11  jumbotron">
+<div *ngIf="!identity" class="col-lg-12  jumbotron" style="height:100%">
   <div class="row">
     <div class="col-lg-6">
       <h2>Identifícate</h2>
